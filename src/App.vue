@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Header/>
     <v-main>
       <TopPage/>
     </v-main>
@@ -8,6 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Header from './components/Header.vue'
 import TopPage from './components/TopPage.vue'
 
 export default defineComponent({
@@ -15,6 +17,7 @@ export default defineComponent({
 
   components: {
     TopPage,
+    Header
   },
 
   data () {
