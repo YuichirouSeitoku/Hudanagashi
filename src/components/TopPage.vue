@@ -100,7 +100,7 @@ import { defineComponent } from 'vue'
 import logo from '../assets/logo.svg'
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: 'TopPage',
 
   data () {
     return {
