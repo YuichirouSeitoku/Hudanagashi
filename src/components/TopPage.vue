@@ -11,13 +11,12 @@
       <v-col
         cols="6"
       >
-        <v-text-field
-          label="グループ名"
-          placeholder="日向坂46"
-          filled
-          rounded
-          dence
-        ></v-text-field>
+        <v-combobox
+          outlined
+          v-model="select"
+          :items="items"
+          label="好きなグループ名"
+        ></v-combobox>
       </v-col>
       <v-col
         cols="4"
@@ -43,6 +42,12 @@ export default defineComponent({
 
   data () {
     return {
+      select: [],
+      items: [
+        '乃木坂46',
+        '櫻坂46',
+        '日向坂46',
+      ],
     }
   },
 })
