@@ -26,6 +26,7 @@
             color="primary"
             dark
             align-content="center"
+            @click="clickButton"
           >
             START
           </v-btn>
@@ -36,10 +37,21 @@
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'TopPage',
 
+  setup() {
+    const router = useRouter()
+    const clickButton = () => {
+      router.push("/quiz")
+    }
+
+    return {
+      clickButton
+    }
+  },
   data () {
     return {
       select: [],
